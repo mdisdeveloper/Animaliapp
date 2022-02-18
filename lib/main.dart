@@ -18,6 +18,15 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _currentPage = 2;
+
+  final List<Widget> _page = [
+    const Wellbeing(),
+    const Passbook(),
+    const Pet(),
+    const Doctor(),
+    const Settings(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,12 +36,8 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.deepOrange,
       ),
       home: Scaffold(
-        body: _currentPage == 0 ? const Wellbeing()
-            : _currentPage == 1 ? const Passbook()
-            : _currentPage == 2 ? const Pet()
-            : _currentPage == 3 ? const Doctor()
-            : _currentPage == 4 ? const Settings()
-            : const Pet(),
+        appBar: AppBar(),
+        body: _page[_currentPage],
 
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index){
