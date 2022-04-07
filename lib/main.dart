@@ -4,7 +4,6 @@ import 'navigation/doctor.dart';
 import 'navigation/passbook.dart';
 import 'navigation/settings.dart';
 import 'navigation/wellbeing.dart';
-import './login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,9 +37,10 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(),
-        body: const Login(),
+        body: _page[_currentPage],
         // _page[_currentPage]
         bottomNavigationBar: BottomNavigationBar(
+          elevation: 0.0,
           onTap: (index){
             setState(() {
               _currentPage = index;

@@ -6,10 +6,12 @@ class Wellbeing extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        "Status of the pet & improvement plans",
-        style: TextStyle(fontSize: 30),
+    return Container(
+      child: const Center(
+        child: Text(
+          "Status of the pet & improvement plans",
+          style: TextStyle(fontSize: 30),
+        ),
       ),
     );
   }
