@@ -34,7 +34,7 @@ Widget emailField(){
       decoration: InputDecoration(
         hintText: "Email",
         fillColor: Colors.white,
-        filled: true,
+        filled: false,
       ),
     ),
   );
@@ -46,6 +46,8 @@ Widget passwordField(){
     child: const TextField(
       decoration: InputDecoration(
         hintText: "Password",
+        fillColor: Colors.white,
+        filled: false,
       ),
     ),
   );
@@ -57,6 +59,7 @@ Widget logIn(){
     child: const Text(
       "Log In",
     ),
+
   );
 }
 

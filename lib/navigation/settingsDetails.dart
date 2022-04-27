@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:animaliapp/navigation/settings.dart';
 class SettingsDetails extends StatefulWidget {
   final int _index;
 
@@ -9,7 +8,7 @@ class SettingsDetails extends StatefulWidget {
    return Scaffold(
      appBar: AppBar(
        title: const Text(
-         'titulo del ajuste seleccionado'
+         'Settings Title'
        ),
      ),
      body: Center(child: Text('Details of #$_index'),
